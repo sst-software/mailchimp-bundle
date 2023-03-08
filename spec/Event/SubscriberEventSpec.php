@@ -16,7 +16,7 @@ class SubscriberEventSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->shouldHaveType('Welp\MailchimpBundle\Event\SubscriberEvent');
-        $this->shouldHaveType('Symfony\Component\EventDispatcher\Event');
+        $this->shouldHaveType('Symfony\Contracts\EventDispatcher\Event');
     }
 
     function it_has_a_listname()

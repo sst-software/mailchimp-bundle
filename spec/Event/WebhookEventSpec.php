@@ -15,7 +15,7 @@ class WebhookEventSpec extends ObjectBehavior
     function it_is_initializable()
     {
         $this->shouldHaveType('Welp\MailchimpBundle\Event\WebhookEvent');
-        $this->shouldHaveType('Symfony\Component\EventDispatcher\Event');
+        $this->shouldHaveType('Symfony\Contracts\EventDispatcher\Event');
     }
 
     function it_has_data($data)

@@ -514,6 +514,7 @@ class ListRepository
     private function throwMailchimpError(array $errorResponse)
     {
         $errorArray = json_decode($errorResponse['body'], true);
+        dump($errorArray);
         if (is_array($errorArray) && array_key_exists('errors', $errorArray)) {
             throw new MailchimpException(
                 $errorArray['status'],

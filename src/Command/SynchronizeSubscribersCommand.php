@@ -45,7 +45,7 @@ class SynchronizeSubscribersCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setDescription('Synchronizing subscribers in MailChimp')
@@ -63,7 +63,7 @@ class SynchronizeSubscribersCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln(sprintf('<info>%s</info>', $this->getDescription()));
 
@@ -82,6 +82,8 @@ class SynchronizeSubscribersCommand extends Command
                 }
             }
         }
+
+        return Command::SUCCESS;
     }
 
     /**

@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 use Welp\MailchimpBundle\Provider\ListProviderInterface;
@@ -27,7 +28,7 @@ class WebhookController extends Controller
      * @throws AccessDeniedHttpException
      * @return JsonResponse
      */
-    public function indexAction(Request $request)
+    public function indexAction(Request $request): Response
     {
 
         // For Mailchimp ping GET
